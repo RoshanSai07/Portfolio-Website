@@ -93,8 +93,8 @@ export const ContactSection = () => {
                   href="https://github.com/RoshanSai07"
                   className="flex items-center space-x-3 p-3 bg-light rounded-xl bg-light-hover transition-colors group"
                 >
-                  <div className="bg-gray-200 p-2 rounded-lg group-hover:bg-gray-400 transition-colors">
-                    <Github className="w-5 h-5 text-black-800" />
+                  <div className="bg-gray-200 p-2 rounded-lg group-hover:bg-gray-100 transition-colors">
+                    <Github className="w-5 h-5 text-black" />
                   </div>
                   <span className="text-sub font-medium text-sm sm:text-base">
                     GitHub
