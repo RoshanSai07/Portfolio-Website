@@ -11,11 +11,18 @@ export default function InkCursor() {
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [showRing, setShowRing] = useState(false);
   const [clickPulse, setClickPulse] = useState(false);
-
-  let clickId = 0;
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+      setEnabled(false);
+      return;
+    }
+    setEnabled(true);
+
     document.body.style.cursor = "none";
+
+    let clickId = 0;
 
     const onMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
@@ -27,7 +34,7 @@ export default function InkCursor() {
       setShowRing(hoveringInteractive);
     };
 
-    const onClick = (e: MouseEvent) => {
+    const onClick = () => {
       clickId++;
       setClickPulse(true);
       setTimeout(() => setClickPulse(false), 200);
@@ -42,6 +49,8 @@ export default function InkCursor() {
       window.removeEventListener("click", onClick);
     };
   }, []);
+
+  if (!enabled) return null;
 
   const ringScale = showRing ? (clickPulse ? 0.8 : 1.1) : 0.6;
   const ringOpacity = showRing ? 1 : 0;
