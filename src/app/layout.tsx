@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Poppins, Inter } from "next/font/google";
 import { ThemeProviderWrapper } from "./ThemeProviderWrapper";
 import ScrollCircle from "../components/ScrollCircle";
@@ -35,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+        <Analytics />
         <ScrollCircle />
         <ThemeProviderWrapper>
           <Cursor />
