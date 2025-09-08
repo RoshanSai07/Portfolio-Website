@@ -30,8 +30,9 @@ export default function ProjectCard({ project }: { project: Project }) {
              transition-transform duration-300 hover:-translate-y-0.5
              grid grid-rows-[auto_auto_1fr_auto] sm:min-h-[480px]"
     >
+      {/* Status badge (absolute as before) */}
       <div
-        className={`absolute sm:top-3 sm:right-3 top-2 right-2 px-2 py-1 text-xs font-semibold rounded flex items-center gap-2 ${classifyStatus(
+        className={`absolute top-3 right-3 px-2 py-1 text-xs font-semibold rounded flex items-center gap-2 ${classifyStatus(
           project.status
         )}`}
       >
@@ -41,29 +42,33 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.status}
       </div>
 
-      <h2 className="text-light text-lg sm:text-xl font-semibold mb-3 leading-snug">
+      {/* Add top margin so the heading starts below the badge */}
+      <h2 className="text-light text-xl font-semibold mb-4 leading-snug mt-8">
         {project.title}
         <span className="text-sub text-sm block mt-1">{project.type}</span>
       </h2>
 
+      {/* Image */}
       {project.imageUrl ? (
-        <div className="mb-3 w-full">
+        <div className="mb-4">
           <Image
             src={project.imageUrl}
             alt={`Preview of ${project.title}`}
             width={600}
             height={400}
-            className="border-themed rounded w-full h-auto object-cover"
+            className="border-themed rounded w-full object-cover h-60"
           />
         </div>
       ) : (
-        <div className="h-48 sm:h-60 bg-prev rounded mb-3 flex items-center justify-center text-sub">
+        <div className="h-60 bg-prev rounded mb-4 flex items-center justify-center text-sub">
           Preview Unavailable
         </div>
       )}
 
-      <p className="text-sub mb-3 leading-relaxed">{project.description}</p>
+      {/* Description */}
+      <p className="text-sub mb-4 leading-relaxed">{project.description}</p>
 
+      {/* Buttons */}
       <div className="flex flex-col sm:flex-row sm:space-x-5 gap-2">
         {project.codeUrl && (
           <a
