@@ -1,9 +1,10 @@
 import { SectionWrapper } from "@/components/SectionWrapper";
+import Link from "next/link";
 
 export const AboutSection = () => {
   return (
     <SectionWrapper className="max-w-6xl mx-auto">
-      <section className="py-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+      <section className="py-8 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <div className="mb-12 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-3xl mb-4 heading">
             Who am I, Really?
@@ -137,6 +138,27 @@ export const AboutSection = () => {
                 </span>
               </div>
             </div>
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/myStory"
+              className="text-sub text-sm sm:text-base font-medium hover:text-primary transition inline-flex items-center space-x-2 transform hover:scale-105 active:scale-95"
+            >
+              <span>Know more about me</span>
+              <svg
+                className="w-5 h-5 text-gray-400 animate-bounce-x"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 12h14m0 0l-4-4m4 4l-4 4"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

@@ -191,3 +191,49 @@ body {
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
   }
 }
+
+@keyframes pixelNoise {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 20px 10px;
+  }
+  50% {
+    background-position: -15px 5px;
+  }
+  75% {
+    background-position: 10px -20px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-pixelFade {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #000 0px,
+      #000 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000 0px,
+      #000 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  background-size: 3px 3px;
+  animation: pixelNoise 0.2s infinite steps(4), fadeOut 1s forwards;
+}

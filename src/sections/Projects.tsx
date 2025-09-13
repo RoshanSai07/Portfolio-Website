@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
   const miniProjects = projects.filter((proj) => proj.type === "Mini-Project");
 
   return (
-    <SectionWrapper className="py-16 px-6 max-w-6xl mx-auto">
+    <SectionWrapper className="py-8 px-6 max-w-6xl mx-auto">
       <section className="py-6 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl heading text-light text-center mb-10">
           Projects
