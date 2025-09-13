@@ -45,7 +45,7 @@ export const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-light text-lg">Mobile</h3>
                   <p className="text-sub mt-1 text-sm sm:text-base">
-                    +91 98765 43210
+                    +91 9550737746
                   </p>
                   <a
                     href="tel:+919550737746"
