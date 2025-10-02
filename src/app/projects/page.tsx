@@ -20,14 +20,14 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Machine Learning Model for Predicting Chronic Disease Risk",
-    type: "ECS Project",
+    type: "AI Project",
     status: "In Progress",
     description:
       "Building a predictive ML model designed to estimate the risk of chronic diseases for individuals, aimed at early detection and better preventive care.",
   },
   {
     title: "Smart Desk Companion",
-    type: "AI Project",
+    type: "ECS Project",
     status: "In Progress",
     description:
       "Building an emotionally intelligent desk companion that monitors and responds to student emotions in real-time.",
