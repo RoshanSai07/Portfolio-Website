@@ -16,28 +16,33 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Machine Learning Model for Predicting Chronic Disease Risk",
-    type: "AI Project",
-    status: "In Progress",
-    description:
-      "Building a predictive ML model designed to estimate the risk of chronic diseases for individuals, aimed at early detection and better preventive care.",
-  },
-  {
     title: "Smart Desk Companion",
     type: "ECS Project",
-    status: "In Progress",
+    status: "Preview Unavailable",
     description:
       "Building an emotionally intelligent desk companion that monitors and responds to student emotions in real-time.",
+    codeUrl: "https://github.com/RoshanSai07/Smart-Desk-Companion",
+    imageUrl: "/assets/SmartDeskCompanion.jpeg",
   },
   {
     title: "Time-Table Optimizer",
-    type: "Mini-Project",
+    type: "Web-Dev Project",
     status: "Live",
     description:
       "A tool that helps students create an optimal class schedule without time slot conflicts.",
     codeUrl: "https://github.com/RoshanSai07/Timetable-Optimizer",
     liveUrl: "https://clashguard.netlify.app/",
     imageUrl: "/assets/Clashguard.png",
+  },
+  {
+    title: "Screen-Time Leaderboard",
+    type: "Mini-Project",
+    status: "Live",
+    description:
+      "A small website with a really small backend that stores screen times entered and shows them as leaderboard.",
+    codeUrl: "https://github.com/RoshanSai07/Screen-Time-Leaderboard",
+    liveUrl: "https://screen-time-leaderboard.netlify.app/",
+    imageUrl: "/assets/ScreenTimeLeaderboard.png",
   },
   {
     title: "Hearts through Time",
@@ -53,7 +58,7 @@ const projects: Project[] = [
 
 export const ProjectsSection = () => {
   const mainProjects = projects.filter(
-    (proj) => proj.type === "ECS Project" || proj.type === "AI Project"
+    (proj) => proj.type === "ECS Project" || proj.type === "Web-Dev Project"
   );
   const miniProjects = projects.filter((proj) => proj.type === "Mini-Project");
 

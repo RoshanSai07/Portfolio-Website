@@ -19,28 +19,33 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Machine Learning Model for Predicting Chronic Disease Risk",
-    type: "AI Project",
-    status: "In Progress",
-    description:
-      "Building a predictive ML model designed to estimate the risk of chronic diseases for individuals, aimed at early detection and better preventive care.",
-  },
-  {
     title: "Smart Desk Companion",
     type: "ECS Project",
-    status: "In Progress",
+    status: "Preview Unavailable",
     description:
       "Building an emotionally intelligent desk companion that monitors and responds to student emotions in real-time.",
+    codeUrl: "https://github.com/RoshanSai07/Smart-Desk-Companion",
+    imageUrl: "/assets/SmartDeskCompanion.jpeg",
   },
   {
     title: "Time-Table Optimizer",
-    type: "Mini-Project",
+    type: "Web-Dev Project",
     status: "Live",
     description:
       "A tool that helps students create an optimal class schedule without time slot conflicts.",
     codeUrl: "https://github.com/RoshanSai07/Timetable-Optimizer",
     liveUrl: "https://clashguard.netlify.app/",
     imageUrl: "/assets/Clashguard.png",
+  },
+  {
+    title: "Screen-Time Leaderboard",
+    type: "Mini-Project",
+    status: "Live",
+    description:
+      "A small website with a really small backend that stores screen times entered and shows them as leaderboard.",
+    codeUrl: "https://github.com/RoshanSai07/Screen-Time-Leaderboard",
+    liveUrl: "https://screen-time-leaderboard.netlify.app/",
+    imageUrl: "/assets/ScreenTimeLeaderboard.png",
   },
   {
     title: "Hearts through Time",
@@ -69,6 +74,7 @@ const projects: Project[] = [
       "A clean, responsive web calculator implementing basic arithmetic operations.",
     codeUrl: "https://github.com/RoshanSai07/Project5-CalC",
     liveUrl: "https://odinproject5.netlify.app/",
+    imageUrl: "/assets/Calculator.png",
   },
   {
     title: "Rock-Paper-Scissors Game",
@@ -78,6 +84,7 @@ const projects: Project[] = [
       "A simple browser-based game implementing classic Rock-Paper-Scissors mechanics with score tracking.",
     codeUrl: "https://github.com/RoshanSai07/Project3-Rock-Paper-Scissors",
     liveUrl: "https://odinproject3.netlify.app/",
+    imageUrl: "/assets/RockPaperScissors.png",
   },
   {
     title: "Etch-a-Sketch",
@@ -87,6 +94,7 @@ const projects: Project[] = [
       "A browser-based Etch-a-Sketch built with JavaScript, HTML, and CSS.",
     codeUrl: "https://github.com/RoshanSai07/Project4-Etch-a-Sketch",
     liveUrl: "https://odinproject4.netlify.app/",
+    imageUrl: "/assets/EtchASketch.png",
   },
 ];
 export default function Projects(): ReactElement {
@@ -98,7 +106,7 @@ export default function Projects(): ReactElement {
   }, []);
 
   const mainProjects = projects.filter(
-    (proj) => proj.type === "ECS Project" || proj.type === "AI Project"
+    (proj) => proj.type === "ECS Project" || proj.type === "Web-Dev Project"
   );
   const miniProjects = projects.filter((proj) => proj.type === "Mini-Project");
 

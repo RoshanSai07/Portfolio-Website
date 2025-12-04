@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 export default function LineWaveLoader({ loading }: { loading: boolean }) {
-  if (!loading) return null; // hide loader if not loading
+  if (!loading) return null;
 
-  const lines = Array.from({ length: 7 });
+  const lines = Array.from({ length: 8 });
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-light dark:bg-dark z-[9999]">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-light dark:bg-dark z-[9999]">
       <div className="relative flex space-x-1">
         {lines.map((_, i) => (
           <div
@@ -22,6 +22,7 @@ export default function LineWaveLoader({ loading }: { loading: boolean }) {
           />
         ))}
       </div>
+      <div>Loading</div>
 
       <style jsx>{`
         @keyframes wave {
